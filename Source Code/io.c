@@ -1,6 +1,15 @@
 #include "header.h"
 
-int inputNumber(){
+int inputNumberGetch(){
+
+}
+
+int inputNumberMaxDigits(int digits){
+
+}
+
+int inputNumberMaxValue(int digits){
+
 }
 
 char* inputString(){

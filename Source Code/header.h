@@ -31,7 +31,9 @@ void deposit(Account* a, double amount);
 
 
 /*IO.C FUNCTION PROTOTYPES*/
-int inputNumber();
+int inputNumberGetch();
+int inputNumberMaxDigits(int digits);
+int inputNumberMaxValue(int digits);
 char* inputString();
 int inputPin();
 

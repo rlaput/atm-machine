@@ -1,4 +1,3 @@
-
 typedef struct Account {
     char * name;
     int accountNum;
@@ -7,5 +6,4 @@ typedef struct Account {
     struct Account* next;
     struct Account* prev;
 } Account;
-
 

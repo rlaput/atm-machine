@@ -37,4 +37,5 @@ int inputNumberMaxValue(int digits);
 char* inputString();
 int inputPin();
 
-
+/*MAIN.C FUNCTION PROTOTYPES*/
+void printMenu();

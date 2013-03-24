@@ -4,11 +4,11 @@ int inputNumberGetch(){
 
 }
 
-int inputNumberMaxDigits(int digits){
+int inputAccountNum(){
 
 }
 
-int inputNumberMaxValue(int digits){
+int inputNumberMaxValue(int max){
 
 }
 

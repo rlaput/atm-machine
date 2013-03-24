@@ -26,16 +26,18 @@ void readFile(List* list,char* fileName);
 void writeFile(List* list, char* fileName);
 
 Account* newAccount();
+List* newList();
 void withdraw(Account* a, double amount);
 void deposit(Account* a, double amount);
 
 
 /*IO.C FUNCTION PROTOTYPES*/
 int inputNumberGetch();
-int inputNumberMaxDigits(int digits);
-int inputNumberMaxValue(int digits);
+int inputAccountNum();
+int inputNumberMaxValue(int max);
 char* inputString();
 int inputPin();
 
 /*MAIN.C FUNCTION PROTOTYPES*/
 void printMenu();
+Account* login();

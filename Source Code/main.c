@@ -8,7 +8,7 @@ int main(){
     list = *(newList());
     do{
         printMenu();
-        scanf("%d",&choice); //TO BE CHANGED TO choice = inputNumberMaxValue(4);
+        choice = inputNumberMaxValue(4);
         switch(choice){
         case 1:
             break;

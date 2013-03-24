@@ -24,15 +24,14 @@ Account getAccount(List* list, int i);
 Account * searchAccount(List* list, int account, int pin);
 void readFile(List* list,char* fileName);
 void writeFile(List* list, char* fileName);
-
-Account* newAccount();
-List* newList();
 void withdraw(Account* a, double amount);
 void deposit(Account* a, double amount);
 
+Account* newAccount();
+List* newList();
+
 
 /*IO.C FUNCTION PROTOTYPES*/
-int inputNumberGetch();
 int inputAccountNum();
 int inputNumberMaxValue(int max);
 char* inputString();

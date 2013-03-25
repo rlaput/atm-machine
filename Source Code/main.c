@@ -2,6 +2,7 @@
 #include "header.h"
 
 List list;
+Account a, *acc;
 
 int main(){
     int choice;
@@ -11,7 +12,7 @@ int main(){
         choice = inputNumberMaxValue(5);
         switch(choice){
         case 1:
-            /*Account a = *(newAccount());
+            a = *(newAccount());
             system("cls");
             printf("ADD AN ATM ACCOUNT\n");
             printf("\nEnter your Name: ");
@@ -21,13 +22,13 @@ int main(){
             printf("\nEnter your Account Pin (6 Digits): ");
             a.accountPin = inputPin();
             addAccount(&list,a);
-            print("\n\nAccount Successfully Added");
+            printf("\n\nAccount Successfully Added");
             getch();
-            */break;
+            break;
         case 2:
             break;
         case 3:
-            Account* acc = login();
+            acc = login();
             if(acc == NULL){
                 printf("Invalid Login Credentials");
             }
@@ -61,5 +62,5 @@ Account* login(){
     scanf("%d",&num); //TO BE CHANGE TO num=inputAccountNum();
     printf("Enter Pin Number --> ");
     scanf("%d",&pin); //TO BE CHANGED TO pin=inputPin();
-    return searchAccoun(list,num,pin);
+    return searchAccount(&list,num,pin);
 }

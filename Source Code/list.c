@@ -23,7 +23,7 @@ int getSize(List* list){
 
 Account getAccount(List* list, int i){
     Account * toGet = list->head;
-    if(list->size == 0) return;
+    if(list->size == 0) return NULL;
     for(;i > 0;i--) toGet = toGet->next;
     return *toGet;
 }

@@ -1,7 +1,7 @@
 #include "header.h"
 
 int inputAccountNum(){
-
+    //numbers only 9 exact
 }
 
 int inputNumberMaxValue(int max){
@@ -15,10 +15,10 @@ int inputNumberMaxValue(int max){
 }
 
 char* inputString(){
-
+    //no limit
 }
 
 int inputPin(){
-
+    //numbers only, 6 digits exactly. asterisk only, backspace clear hjud, enter if 6 na
 }
 

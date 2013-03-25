@@ -37,24 +37,32 @@ int main(){
                 printf("\nInvalid Login Credentials");
             }
             else{
-                printf("WELCOME TO YOUR ACCOUNT %s"acc->name);
-                printf("1. Withdraw Money");
-                printf("2. Deposit Money");
-                printf("3. Back to Main Menu");
+                printf("\n\nWELCOME TO YOUR ACCOUNT %s",acc->name);
+                printf("\nCURRENT BALANCE %.2f",acc->balance);
+                printf("\n\n\t1. Withdraw Money");
+                printf("\n\t2. Deposit Money");
+                printf("\n\t3. Back to Main Menu");
+                printf("\nEnter Choice --> ");
                 choice2 = inputNumberMaxValue(3);
                 if(choice2 < 3){
                     float amount;
                     printf("\nEnter Amount: ");
                     scanf("%f",&amount);
                     if(choice2 == 1){
+                        if(amount > acc->balance){
+                            printf("\nNot Enough Funds.");
+                            getch();
+                            break;
+                        }
                         withdraw(acc,amount);
                     }
                     else{
                         deposit(acc,amount);
                     }
-                    printf("\n\nAction Successfull")
+                    printf("\n\nAction Successfull");
+                    getch();
+
                 }
-                getch();
             }
             break;
         case 4:

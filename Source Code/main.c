@@ -7,6 +7,7 @@ int i;
 int main(){
     int choice,choice2;
     list = newList();
+    readData();
     do{
         Account *acc;
         printMenu();
@@ -24,6 +25,7 @@ int main(){
             acc->accountPin = inputPin();
             addAccount(list,acc);
             printf("\n\nAccount Successfully Added");
+            saveData();
             getch();
             break;
         case 2:
@@ -60,6 +62,7 @@ int main(){
                         deposit(acc,amount);
                     }
                     printf("\n\nAction Successfull");
+                    saveData();
                     getch();
 
                 }
@@ -72,6 +75,7 @@ int main(){
             i = inputNumberMaxValue(list->size);
             deleteAccount(list,i-1);
             printf("\nAccount Deleted.");
+            saveData();
             getch();
             break;
         default:
@@ -111,4 +115,12 @@ void displayAccounts(){
         Account* c = getAccount(list,i);
         printf("\n%-5d%-15s%-20d%-10.2f",i+1,c->name,c->accountNum,c->balance);
     }
+}
+
+void saveData(){
+    writeFile(list,"list.txt");
+}
+
+void readData(){
+    readFile(list,"list.txt");
 }

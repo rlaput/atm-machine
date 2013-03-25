@@ -41,3 +41,6 @@ int inputPin();
 void printMenu();
 Account* login();
 void displayAccounts();
+void saveData();
+void readData();
+

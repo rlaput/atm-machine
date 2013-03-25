@@ -52,7 +52,7 @@ void printMenu(){
     printf("\t4. Delete an Account");
     printf("\t5. Exit\n\n");
     printf("Enter Choice --> ");
-    printf("TEST");
+    printf("TESTONLY");
 }
 
 Account* login(){

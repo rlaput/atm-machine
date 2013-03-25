@@ -10,7 +10,7 @@ void addAccount(List* list, Account a){
 }
 
 void deleteAccount(List* list, int i){
-    Account * toDelete = getAccount(list,i);
+    Account * toDelete = &(getAccount(list,i));
     toDelete->next->prev = toDelete->prev;
     toDelete->prev->next = toDelete->next;
     free(toDelete);

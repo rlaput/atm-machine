@@ -42,6 +42,26 @@ char* inputString(){
 }
 
 int inputPin(){
-    //numbers only, 6 digits exactly. asterisk only, backspace clear hjud, enter if 6 na
+       int input = 0;
+    int i = 0, x=15;
+
+    do{
+        while(x < 0 || x > 9){
+            x = getch() - '0';
+            if((x < 0 || x > 9) && (x+'0') !=8)printf("\a");
+            if((x + '0') == 8 && i != 0){
+                printf("\b \b");
+                input /= 10;
+                i--;
+                continue;
+            }
+        }
+
+        printf("*");
+        input = (input*10) + x;
+        i++;
+        x = 15;
+    }while(i<6);
+    return input;
 }
 

@@ -49,11 +49,12 @@ void writeFile(List* list, char* fileName){
 }
 
 void withdraw(Account* a, float amount){
-
+    if(a->balance < amount) return;
+    a->balance -= amount;
 }
 
 void deposit(Account* a, float amount){
-
+    a->balance += amount;
 }
 
 List * newList(){

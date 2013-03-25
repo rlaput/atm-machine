@@ -24,8 +24,8 @@ Account* getAccount(List* list, int i);
 Account* searchAccount(List* list, int account, int pin);
 void readFile(List* list,char* fileName);
 void writeFile(List* list, char* fileName);
-void withdraw(Account* a, double amount);
-void deposit(Account* a, double amount);
+void withdraw(Account* a, float amount);
+void deposit(Account* a, float amount);
 
 Account* newAccount();
 List* newList();

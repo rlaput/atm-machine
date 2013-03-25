@@ -5,7 +5,7 @@ List* list;
 int i;
 
 int main(){
-    int choice;
+    int choice,choice2;
     list = newList();
     do{
         Account *acc;
@@ -34,9 +34,28 @@ int main(){
         case 3:
             acc = login();
             if(acc == 0){
-                printf("Invalid Login Credentials");
+                printf("\nInvalid Login Credentials");
             }
-            getch();
+            else{
+                printf("WELCOME TO YOUR ACCOUNT %s"acc->name);
+                printf("1. Withdraw Money");
+                printf("2. Deposit Money");
+                printf("3. Back to Main Menu");
+                choice2 = inputNumberMaxValue(3);
+                if(choice2 < 3){
+                    float amount;
+                    printf("\nEnter Amount: ");
+                    scanf("%f",&amount);
+                    if(choice2 == 1){
+                        withdraw(acc,amount);
+                    }
+                    else{
+                        deposit(acc,amount);
+                    }
+                    printf("\n\nAction Successfull")
+                }
+                getch();
+            }
             break;
         case 4:
             system("cls");

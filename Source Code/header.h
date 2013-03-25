@@ -1,3 +1,4 @@
+#include <stdio.h>
 /*STRUCT DECLARATIONS*/
 
 typedef struct BankAccount {

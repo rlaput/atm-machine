@@ -6,44 +6,35 @@ void addAccount(List* list, Account a){
     toAdd->next = list->tail;
     list->tail->prev->next = toAdd;
     list->tail->prev = toAdd;
+    list->size++;
 }
 
 void deleteAccount(List* list, int i){
-    Account * toDelete = list->head;
-    if(list->size == 0) return;
-    else{
-        for(;i > 0;i--) toDelete = toDelete->next;
-        toDelete->next->prev = toDelete->prev;
-        toDelete->prev->next = toDelete->next;
-        free(toDelete);
-    }
+    Account * toDelete = getAccount(list,i);
+    toDelete->next->prev = toDelete->prev;
+    toDelete->prev->next = toDelete->next;
+    free(toDelete);
+    list->size--;
 }
 
 int getSize(List* list){
-    Account * current = list->head->next;
-    while(current != list->tail){
-        list->size++;
-        current = current->next;
-    }
     return list->size;
 }
 
 Account getAccount(List* list, int i){
     Account * toGet = list->head;
     if(list->size == 0) return;
-    else{
-        for(;i > 0;i--) toGet = toGet->next;
-        return *toGet;
-    }
+    for(;i > 0;i--) toGet = toGet->next;
+    return *toGet;
 }
 
 Account * searchAccount(List* list, int account, int pin){
     Account * toSearch = list->head->next;
-    if(list->size == 0) return;
-    else{
+    while(toSearch != tail){
         while(toSearch->accountNum != account && toSearch->accountPin != pin) toSearch = toSearch->next;
         return toSearch;
     }
+    return NULL;
 }
 
 void readFile(List* list,char* fileName){

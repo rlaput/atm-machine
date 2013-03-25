@@ -49,10 +49,9 @@ void printMenu(){
     printf("\t1. Create new Account\n");
     printf("\t2. Display all Accounts\n");
     printf("\t3. Login in to Account\n");
-    printf("\t4. Delete an Account");
+    printf("\t4. Delete an Account\n");
     printf("\t5. Exit\n\n");
     printf("Enter Choice --> ");
-    printf("TESTONLY");
 }
 
 Account* login(){

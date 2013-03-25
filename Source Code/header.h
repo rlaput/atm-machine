@@ -20,8 +20,8 @@ typedef struct LinkedList{
 void addAccount(List* list, Account a);
 void deleteAccount(List* list, int i);
 int getSize(List* list);
-Account getAccount(List* list, int i);
-Account * searchAccount(List* list, int account, int pin);
+Account* getAccount(List* list, int i);
+Account* searchAccount(List* list, int account, int pin);
 void readFile(List* list,char* fileName);
 void writeFile(List* list, char* fileName);
 void withdraw(Account* a, double amount);

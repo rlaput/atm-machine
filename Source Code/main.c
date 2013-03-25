@@ -11,15 +11,15 @@ int main(){
         choice = inputNumberMaxValue(5);
         switch(choice){
         case 1:
-           /* Account a = *(new Account());
+            /*Account a = *(newAccount());
             system("cls");
             printf("ADD AN ATM ACCOUNT\n");
             printf("\nEnter your Name: ");
-            a->name = inputString();
+            a.name = inputString();
             printf("\nEnter your Account Number (9 Digits): ");
-            a->accountNum = inputAccountNum();
+            a.accountNum = inputAccountNum();
             printf("\nEnter your Account Pin (6 Digits): ");
-            a->accountPin = inputPin();
+            a.accountPin = inputPin();
             addAccount(&list,a);
             print("\n\nAccount Successfully Added");
             getch();
@@ -27,7 +27,10 @@ int main(){
         case 2:
             break;
         case 3:
-            //Account* acc = login();
+            Account* acc = login();
+            if(acc == NULL){
+                printf("Invalid Login Credentials");
+            }
             break;
         case 4:
             break;
@@ -58,5 +61,5 @@ Account* login(){
     scanf("%d",&num); //TO BE CHANGE TO num=inputAccountNum();
     printf("Enter Pin Number --> ");
     scanf("%d",&pin); //TO BE CHANGED TO pin=inputPin();
-    return NULL;    //TO BE CHANGED TO return searchAccoun(list,num,pin);
+    return searchAccoun(list,num,pin);
 }

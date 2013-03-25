@@ -1,7 +1,6 @@
 #include "header.h"
 
-void addAccount(List* list, Account a){
-    Account * toAdd = &a;
+void addAccount(List* list, Account* toAdd){
     toAdd->prev = list->tail->prev;
     toAdd->next = list->tail;
     list->tail->prev->next = toAdd;
@@ -24,7 +23,9 @@ int getSize(List* list){
 Account* getAccount(List* list, int i){
     Account* toGet = list->head;
     if(list->size == 0) return;
-    for(;i > 0;i--) toGet = toGet->next;
+    for(;i >= 0;i--) {
+        toGet = toGet->next;
+    }
     return toGet;
 }
 
@@ -34,7 +35,7 @@ Account * searchAccount(List* list, int account, int pin){
         while(toSearch->accountNum != account && toSearch->accountPin != pin) toSearch = toSearch->next;
         return toSearch;
     }
-    return;
+    return 0;
 }
 
 void readFile(List* list,char* fileName){

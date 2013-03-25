@@ -37,12 +37,12 @@ int inputNumberMaxValue(int max){
 
 char* inputString(){
     char *input = (char*)calloc(80,sizeof(char));
-    gets(input);
+    scanf("%s",input);
     return input;
 }
 
 int inputPin(){
-       int input = 0;
+    int input = 0;
     int i = 0, x=15;
 
     do{

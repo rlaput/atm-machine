@@ -17,7 +17,7 @@ typedef struct LinkedList{
 
 /*LIST.C FUNCTION PROTOTYPES*/
 
-void addAccount(List* list, Account a);
+void addAccount(List* list, Account* toAdd);
 void deleteAccount(List* list, int i);
 int getSize(List* list);
 Account* getAccount(List* list, int i);
@@ -40,3 +40,4 @@ int inputPin();
 /*MAIN.C FUNCTION PROTOTYPES*/
 void printMenu();
 Account* login();
+void displayAccounts();

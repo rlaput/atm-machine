@@ -15,7 +15,10 @@ int inputNumberMaxValue(int max){
 }
 
 char* inputString(){
-    //no limit
+    char *input = (char*)calloc(80,sizeof(char));
+
+    gets(input);
+    return input;
 }
 
 int inputPin(){

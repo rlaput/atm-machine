@@ -5,7 +5,7 @@ typedef struct BankAccount {
     char * name;
     int accountNum;
     int accountPin;
-    double balance;
+    float balance;
     struct BankAccount* next;
     struct BankAccount* prev;
 } Account;

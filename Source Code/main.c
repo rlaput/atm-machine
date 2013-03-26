@@ -43,7 +43,7 @@ int main(){
                 printf("\n\n\t1. Withdraw Money");
                 printf("\n\t2. Deposit Money");
                 printf("\n\t3. Back to Main Menu");
-                printf("\nEnter Choice --> ");
+                printf("\n\nEnter Choice --> ");
                 choice2 = inputNumberMaxValue(3);
                 if(choice2 < 3){
                     float amount;

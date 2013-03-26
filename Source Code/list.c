@@ -42,8 +42,8 @@ Account* searchAccount(List* list, int account, int pin){
 
 void readFile(List* list,char* fileName){
     FILE* ifp = fopen(fileName, "r");
-    Account* a = newAccount();
     while(!feof(ifp)){
+        Account* a = newAccount();
         if(fscanf(ifp, "%s %d %d %f", a->name, &a->accountNum, &a->accountPin, &a->balance) != 4)
             break;
         addAccount(list, a);
@@ -53,9 +53,11 @@ void readFile(List* list,char* fileName){
 
 void writeFile(List* list, char* fileName){
     FILE* ofp = fopen(fileName, "w");
-    Account* a = list->head->next;
+    Account* a = newAccount();
+    a = list->head->next;
     while(a != list->tail){
         fprintf(ofp, "%s %d %d %f\n", a->name, a-> accountNum, a->accountPin, a->balance);
+        a = a->next;
     }
     fclose(ofp);
 }
